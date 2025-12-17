@@ -75,11 +75,16 @@ header{
   padding: 8px 10px;
   border-radius: 10px;
   margin-left: 40px;
-  color: #0A2647;
+  color: #ffffff;
   font-size: 0.9rem;
   box-shadow: none;
   font-weight: 500;
   border: none;
+  background: #0A2647;
+}
+.lang-option option{
+  color: white;
+  background: #0A2647;
 }
 .login{
   display:none;
@@ -105,8 +110,14 @@ header{
     cursor: pointer;
     color: #fff;
   }
+   #navbar .logo{
+  width: 100px;
+}
+  body{
+    overflow: hidden;
+  }
   #menu.active{
-    right: 5px;
+    right: 700px;
   }
   #menu li{ 
     padding: 1rem;
@@ -118,12 +129,13 @@ header{
     border-radius: 10px;
     width: 300px;
     position: absolute;
-    top:80px;
-    right: -100%;
+    top: 80px;
+    right: 0.1%;
     padding: 30px 0;
     box-shadow: 0px 2px 10px rgba(0,0,0,0.5);
     transition: all 0.3s linear;
   }
+  
   .login{
      display: block;
     border: none;
@@ -161,7 +173,78 @@ header{
 }
 @media (min-width:600px) and (max-width:1000px ) {
   body{
-    /* background-color: aqua; */
+    overflow: hidden;
+  }
+  #navbar .logo{
+  width: 100px;
+}
+  #menu li a{
+    font-size: 15px;
+    font-weight: 300;
+    margin-left: 20px;
+  }
+  .signin-buttons svg{
+    width: 100px;
+    height: 100px;
+  }
+  .lang-option{
+    margin-left: 20px;
+    font-size: 13px;
+    padding: 6px 8px;
   }
 }
 
+.home-page{
+  padding: 50px;
+  background: #456882;
+  display: flex;
+}
+.content-page1{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  max-width: 450px;
+  font-size: 40px;
+  font-weight: 500;
+  color: white;
+  padding: 20px 0px;
+}
+.search-bar{
+  display: flex;
+  align-items: center;
+}
+.search-bar input{
+  padding: 20px;
+  width: 400px;
+  height: 40px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border: none;
+}
+.search-bar input:focus{
+  outline: none;
+}
+.search_logo button i{
+ font-size: 15px;
+ margin-left: 10px;
+}
+.search_logo button:active{
+  background: #205295;
+}
+.search_logo button{
+  padding: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0A2647;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.content-page2{
+  font-size: 15px;
+  padding: 20px 0px;
+  color: white;
+  font-weight: 500;
+  max-width: 500px;
+}
