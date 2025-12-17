@@ -81,8 +81,9 @@ header{
   font-weight: 500;
   border: none;
 }
-
-
+.login{
+  display:none;
+}
 @keyframes morphing {
   0% {
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
@@ -124,6 +125,7 @@ header{
     transition: all 0.3s linear;
   }
   .login{
+     display: block;
     border: none;
     font-size: 0.9rem;
     font-weight: 500;
@@ -132,27 +134,28 @@ header{
     padding: 10px 25px;
     border: none;
     position: relative;
-    transition: all 0.3s ease;
+    transition: all 0.6s ease;
     overflow: hidden;
     z-index: 1;
   }
   .login::before{
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
     border: none; 
     background: #2C74B3;
-    height: 100%;
-    width: 0%;
-    z-index: -2;
-    border-radius: 20px;
+    height: 0%;
+    width: 100%;
+    transition: all 0.6s ease;
+    z-index: -1;
+    /* border-radius: 20px; */
+  }
+  .login:hover:before{
+    height:100%;
   }
   .login:hover{
-    color: #ffffff;
-  }
-  .login:hover::before{
-    width: 100%;
+    color: white;
   }
   
 }
@@ -161,3 +164,4 @@ header{
     /* background-color: aqua; */
   }
 }
+
