@@ -6,7 +6,7 @@
 .blob-btn {
   z-index: 1;
   position: relative;
-  padding: 15px 30px;
+  padding: 12px 25px;
   margin-bottom: 30px;
   text-align: center;
   text-transform: uppercase;
@@ -115,5 +115,12 @@
   }
   .sign-in-btn{
     padding: 10px 30px;
+  }
+}
+@media (min-width:600px) and (max-width:1000px ) {
+  .blob-btn{
+    font-size: 15px;
+    padding: 8px 12px;
+    top: 45px;
   }
 }
