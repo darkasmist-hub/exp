@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  position: relative;
+}
+h1{
+  font-size: 3rem;
+  font-weight: 600;
+}
+h2{
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 60px;
+}
+h3{
+  font-size: 1.2rem;
+  padding-bottom: 1rem;
+  font-weight: 500;
+}
+.sec-space{
+  padding: 4rem 0;
+}
+.exrta-space{
+  padding-top: 8rem;
+}
+.obj-width{
+  max-width: 1200px;
+  margin: auto;
+}
+.g-btn{
+  margin-left: 40px;
+  background: #ffffff;
+  color: #0A2647;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  box-shadow: none;
+  font-weight: 500;
+  border: none;
+}
+
+/* navbar */
+header{
+  background: #0A2647;
+}
+#menu li a{
+  color: #fff;
+  text-decoration: none;
+  margin-left: 40px;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+#menu{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+}
+#navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+#navbar .logo{
+  width: 180px;
+}
+.lang-option{
+  padding: 8px 10px;
+  border-radius: 10px;
+  margin-left: 40px;
+  color: #0A2647;
+  font-size: 0.9rem;
+  box-shadow: none;
+  font-weight: 500;
+  border: none;
+}
+
+
+@keyframes morphing {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  100% {
+    border-radius: 40% 60% 70% 30% / 40% 70% 30% 60%;
+  }
+}
+
+#bar{
+  color: #000000;
+  display: none;
+
+}
+@media screen and (max-width: 600px) {
+  #bar{
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff;
+  }
+  #menu.active{
+    right: 5px;
+  }
+  #menu li{ 
+    padding: 1rem;
+  }
+  #menu{
+    display: block;
+    background: #205295;
+    height: auto;
+    border-radius: 10px;
+    width: 300px;
+    position: absolute;
+    top:80px;
+    right: -100%;
+    padding: 30px 0;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.5);
+    transition: all 0.3s linear;
+  }
+  .login{
+    border: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-left: 40px;
+    border-radius: 20px;
+    padding: 10px 25px;
+    border: none;
+    position: relative;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    z-index: 1;
+  }
+  .login::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border: none; 
+    background: #2C74B3;
+    height: 100%;
+    width: 0%;
+    z-index: -2;
+    border-radius: 20px;
+  }
+  .login:hover{
+    color: #ffffff;
+  }
+  .login:hover::before{
+    width: 100%;
+  }
+  
+}
+@media (min-width:600px) and (max-width:1000px ) {
+  body{
+    /* background-color: aqua; */
+  }
+}
