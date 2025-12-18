@@ -1,97 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="button.css">
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RNS 3D Auth System - Full Page</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- header -->
-  <header>
-    <nav>
-      <div id="navbar" class="obj-width">
-        <a href="index.html"><img class="logo" src="image/logo.png" alt="LOGO"></a>
-        <ul class="home-list" id="menu">
-          <li><a href="">Home</a></li>
-          <li><a href="">Jobs</a></li>
-          <li><a href="">Services</a></li>
-          <li><a href="">Contact</a></li>
-          <li>
-          <select title="language" class="lang-option">
-            <option value="English">English</option>
-            <option value="Hindi">Hindi</option>
-            <option value="Spanish">Spanish</option>
-            <option value="French">French</option>
-            <option value="German">German</option>
-          </select>
-          </li>
-          <!-- blob button -->
-          <li style="padding: 0px;">
-            <div class="signin-buttons">
-    <button class="blob-btn">
-      Sign In
-      <span class="blob-btn__inner">
-        <span class="blob-btn__blobs">
-          <span class="blob-btn__blob"></span>
-          <span class="blob-btn__blob"></span>
-          <span class="blob-btn__blob"></span>
-          <span class="blob-btn__blob"></span>
-        </span>
-      </span>
-    </button>
-    <br/>
-  
-  <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-    <defs>
-      <filter id="goo">
-        <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
-        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
-        <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
-      </filter>
-    </defs>
-  </svg>
+    <div class="wrapper">
+        <!-- LEFT PANEL - 3D WELCOME TOP -->
+        <div class="left-panel">
+            <div class="welcome-3d">
+                <h1 id="welcomeTitle" data-text="WELCOME">WELCOME</h1>
             </div>
-          </li>
-          <li><button class="login">Sign In</button></li>
-        </ul>
-<!-- hamburger -->
-        <i id="bar" class='bx bx-menu'></i>
-
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <div class="home-page">
-      <div class="panel-one">
-
-        <div class="content-page1">
-          Find the job which help you become financial independent
         </div>
-        <div class="search-bar">
-          <input type="text" placeholder="What type of job you are looking for?" title="search-bar">
-          <div class="search_logo"><button>Search
-            <i class='bx  bx-search'></i>
-          </button> </div>
-        </div>
-  
-        <div class="content-page2">
-          Work in a branded company with talented people who will guide you to your career goals.
-        </div>
-      </div>
 
-      <div class="3d-model">
-        <div class="photo-content">
-          <img src="image/pic1.avif" alt="" height="200px">
+        <!-- RIGHT PANEL -->
+        <div class="right-panel">
+            <div class="slider" id="slider">
+                <!-- SIGN UP -->
+                <div class="panel">
+                    <h2>Create Account</h2>
+                    <div class="form-group">
+                        <input id="suName" placeholder="Full Name">
+                    </div>
+                    <div class="form-group">
+                        <input id="suEmail" type="email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input id="suPass" type="password" placeholder="Password">
+                        <span class="eye" onclick="togglePass('suPass')">👁️</span>
+                    </div>
+                    <button class="btn" onclick="signup()">Sign Up</button>
+
+                    <div class="social-column">
+                        <button class="btn social-btn" onclick="googleLogin()">
+                            <img src="https://www.svgrepo.com/show/475656/google-color.svg"> Continue with Google
+                        </button>
+                        <button class="btn social-btn" onclick="facebookLogin()">
+                            <img src="https://www.svgrepo.com/show/475647/facebook-color.svg"> Continue with Facebook
+                        </button>
+                    </div>
+
+                    <div class="switch">
+                        <span onclick="forgotPassword('suEmail')">Forgot Password?</span>
+                    </div>
+
+                    <div class="switch">
+                        Already have account?
+                        <span onclick="goLogin()">Login</span>
+                    </div>
+                </div>
+
+                <!-- EMAIL VERIFICATION -->
+                <div class="panel">
+                    <h2>Email Verification</h2>
+                    <p>Check your email for verification link</p>
+                    <button class="btn" onclick="checkVerification()">I Verified</button>
+                    <div class="switch">
+                        <span onclick="resendVerification()">Resend Email</span>
+                    </div>
+                </div>
+
+                <!-- LOGIN -->
+                <div class="panel">
+                    <h2>Login</h2>
+                    <div class="form-group">
+                        <input id="liEmail" type="email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input id="liPass" type="password" placeholder="Password">
+                        <span class="eye" onclick="togglePass('liPass')">👁️</span>
+                    </div>
+                    <button class="btn" onclick="login()">Login</button>
+
+                    <div class="social-column">
+                        <button class="btn social-btn" onclick="googleLogin()">
+                            <img src="https://www.svgrepo.com/show/475656/google-color.svg"> Login with Google
+                        </button>
+                        <button class="btn social-btn" onclick="facebookLogin()">
+                            <img src="https://www.svgrepo.com/show/475647/facebook-color.svg"> Login with Facebook
+                        </button>
+                    </div>
+
+                    <div class="switch">
+                        <span onclick="forgotPassword('liEmail')">Forgot Password?</span>
+                    </div>
+
+                    <div class="switch">
+                        New here?
+                        <span onclick="goSignup()">Create Account</span>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </main>
- 
-
+    <script type="module" src="script.js"></script>
 </body>
-<script src="script.js"> </script>
 </html>
