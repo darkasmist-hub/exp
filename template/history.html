@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Acceptance History</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="button.css">
+    <style>
+        :root {
+            --accent: #2b8aef;
+            --muted: #6b7280
+        }
+        body {
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial;
+            margin: 0;
+            color: #111;
+            background: #fff
+        }
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem
+        }
+        h1 {
+            font-size: 1.4rem;
+            margin: 0
+        }
+        .muted {
+            color: var(--muted);
+            font-size: 0.95rem
+        }
+        nav {
+            padding: 0.75rem 1rem;
+            background: #f7f9fc;
+            border-bottom: 1px solid #eef2f6
+        }
+        .btn-back {
+            display: inline-block;
+            padding: 0.45rem 0.7rem;
+            background: var(--accent);
+            color: #fff;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.95rem
+        }
+        .timeline {
+            position: relative;
+            padding-left: 1.25rem;
+            margin-top: 1rem
+        }
+        .timeline:before {
+            content: '';
+            position: absolute;
+            left: 6px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #e6eefc
+        }
+        .entry {
+            position: relative;
+            margin: 1.25rem 0;
+            padding-left: 1rem
+        }
+        .entry-marker {
+            position: absolute;
+            left: -6px;
+            top: 6px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--accent);
+            box-shadow: 0 0 0 4px rgba(43, 138, 239, 0.08)
+        }
+        .date {
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 0.25rem
+        }
+
+        .meta {
+            color: var(--muted);
+            font-size: 0.95rem;
+            margin-bottom: 0.35rem
+        }
+
+        .details {
+            background: #fbfdff;
+            border: 1px solid #eef6ff;
+            padding: 0.6rem;
+            border-radius: 8px;
+            color: #111
+        }
+
+        .note {
+            font-size: 0.9rem;
+            color: var(--muted);
+            margin-top: 0.35rem
+        }
+
+        @media (max-width:520px) {
+            h1 {
+                font-size: 1.1rem
+            }
+
+            .container {
+                margin: 1rem auto
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a class="btn-back" href="index.html">← Back to Dashboard</a>
+    </nav>
+
+    <main class="container">
+        <div class="header">
+            <h1>Job Acceptance History</h1>
+            <p class="muted">A record of accepted offers and key details.</p>
+        </div>
+
+        <section class="timeline" aria-label="Job acceptance timeline">
+            <article class="entry" aria-labelledby="e1-date">
+                <span class="entry-marker" aria-hidden="true"></span>
+                <div id="e1-date" class="date">Dec 10, 2025</div>
+                <div class="meta">Software Engineer — Acme Corp — Full-time</div>
+                <div class="details">Accepted offer. Start date: Jan 5, 2026. Compensation: base + equity. Location:
+                    Remote-first.</div>
+                <div class="note">Signed contract and completed onboarding paperwork.</div>
+            </article>
+
+            <article class="entry" aria-labelledby="e2-date">
+                <span class="entry-marker" aria-hidden="true"></span>
+                <div id="e2-date" class="date">Sep 02, 2024</div>
+                <div class="meta">Frontend Developer — BetaWorks — Contract</div>
+                <div class="details">3-month contract to build UI components. Delivered early, received positive
+                    feedback.</div>
+                <div class="note">Rate: $X/hr. Project completed.</div>
+            </article>
+
+            <article class="entry" aria-labelledby="e3-date">
+                <span class="entry-marker" aria-hidden="true"></span>
+                <div id="e3-date" class="date">Mar 15, 2023</div>
+                <div class="meta">Intern — Gamma Labs — Internship</div>
+                <div class="details">Summer internship; worked on data pipelines and internal tools. Converted to
+                    part-time contract.</div>
+                <div class="note">Mentor: Jane Doe. Performance: exceeds expectations.</div>
+            </article>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
