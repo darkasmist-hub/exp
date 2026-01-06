@@ -1,0 +1,103 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block title %}
+  Job Page
+{% endblock title %}
+
+{% block csslink %}
+      <link rel="stylesheet" href="{%static 'website/style.css' %}">
+      <link rel="stylesheet" href="{%static 'website/jobs.css' %}">
+{% endblock csslink %}
+
+{% block body %}
+   <section class="occupation-section">
+    <div class="occupation">
+      <h2>Jobs in demand</h2>
+      <p>most viewed job recently</p>
+    </div>
+    <div class="job-filter">
+      <select title="stations"  id="station-id">
+        <option >Near Bus/Metro</option>
+        <option >Near Metro Station</option>
+        <option >Near Bus Stand</option>
+      </select>
+      <select title="location" class="location">
+        <option >Your location</option>
+        <option >Delhi</option>
+        <option >Nodia</option>
+        <option >Kolkata</option>
+        <option >Mumbai</option>
+      </select>
+      <select title="jobs" class="type-job">
+        <option >Recent Job</option>
+        <option >Freelancer</option>
+        <option >Part Time</option>
+        <option >Contractual</option>
+        <option >Full Time</option>
+      </select>
+      <select title="salary" class="salary">
+        <option> Salary</option>
+        <option > 5k+</option>
+        <option > 10k+</option>
+        <option> 15k+</option>
+      </select>
+    </div>
+    <div class="jobs-container">
+      <div class="jlisthead">
+        <div>Comapny</div>
+        <div>Work/Role</div>
+        <div>Salary</div>
+        <div>Type</div>
+        <div>location</div>
+      </div>
+      <div class="jlist" data-type="Full Time"  data-job="Nodia">
+        <img src="static/website/image/logo.png" alt="logo">
+        <h3>Web developer</h3>
+        <p>$400-500/m</p>
+        <span id="key">Full Time</span>
+        <div data-job="Nodia">Nodia</div>
+      </div>
+      <div class="jlist" data-type="Full Time"  data-job="Delhi">
+        <img src="static/website/image/logo.png" alt="logo">
+        <h3>Web developer</h3>
+        <p>$400-500/m</p>
+        <span id="key">Full Time</span>
+        <div data-job="Delhi">Delhi</div>
+      </div>
+      <div class="jlist" data-type="Freelancer"  data-job="Delhi">
+        <img src="static/website/image/logo.png" alt="logo">
+        <h3>Web developer</h3>
+        <p>$400-500/m</p>
+        <span id="key">Freelancer</span>
+        <div data-job="Delhi">Delhi</div>
+      </div>
+      <div class="jlist"  data-type="Part Time"  data-job="Mumbai">
+        <img src="static/website/image/logo.png" alt="logo">
+        <h3>Web developer</h3>
+        <p>$400-500/m</p>
+        <span id="key">Part Time</span>
+        <div data-job="Mumbai">Mumbai</div>
+      </div>
+      <div class="jlist"  data-type="Freelancer"  data-job="Kolkata">
+        <img src="static/website/image/logo.png" alt="logo">
+        <h3>Web developer</h3>
+        <p>$400-500/m</p>
+        <span id="key">Freelancer </span>
+        <div data-job="Kolkata">Kolkata</div>
+      </div>
+      <div class="jlist" data-type="Full Time"  data-job="Mumbai">
+        <img src="static/website/image/logo.png" alt="logo">
+        <h3>Web developer</h3>
+        <p>$400-500/m</p>
+        <span id="key">Full Time</span>
+        <div data-job="Mumbai">Mumbai</div>
+      </div>
+    </div>
+  </section>
+{% endblock body %}
+  
+{% block jsfile %}
+  <script src="{%static 'website/jobs.js' %}"></script>
+{% endblock jsfile %}
+
